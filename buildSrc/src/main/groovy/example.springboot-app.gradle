@@ -1,0 +1,37 @@
+/**
+ * Plugin for applying spring boot conventions to modules.
+ */
+
+plugins {
+    // Helix
+    id "example.java-app"
+
+    // Third-Party
+    id "org.springframework.boot"
+}
+
+dependencies {
+    implementation platform(libs.springboot.bom)
+
+    implementation libs.springboot.starter.actuator
+    implementation libs.springboot.starter.web
+
+    testImplementation libs.springboot.starter.test
+}
+
+// Local Development
+task bootRunLocal(group: 'Application') {
+    description = 'Runs this project as a Spring Boot application with the "local" profile active.'
+    bootRun.configure {
+        jvmArgs = [ '-Dspring.profiles.active=local' ]
+    }
+    finalizedBy bootRun
+}
+
+task bootRunLocalDebug(group: 'Application') {
+    description = 'Runs this project as a Spring Boot application with the "local" profile active in debug mode.'
+    bootRun.configure {
+        jvmArgs = [ '-Dspring.profiles.active=local', '-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005' ]
+    }
+    finalizedBy bootRun
+}

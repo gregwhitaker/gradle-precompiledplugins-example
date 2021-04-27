@@ -1,0 +1,15 @@
+plugins {
+    id "groovy-gradle-plugin"
+}
+
+repositories {
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+dependencies {
+    // Plugins - Define all plugin versions here.
+    implementation "com.adarshr.test-logger:com.adarshr.test-logger.gradle.plugin:3.0.0"
+    implementation "org.springframework.boot:org.springframework.boot.gradle.plugin:2.4.5"
+    implementation "org.unbroken-dome.gradle-plugins:gradle-testsets-plugin:3.0.1"
+}

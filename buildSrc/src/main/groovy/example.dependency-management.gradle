@@ -1,0 +1,8 @@
+/**
+ * Plugin for applying dependency management to modules.
+ */
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}

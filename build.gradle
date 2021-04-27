@@ -1,0 +1,10 @@
+plugins {
+    id "idea"
+}
+
+allprojects {
+    apply plugin: "idea"
+
+    group = "com.github.gregwhitaker"
+    version = "0.1.0"
+}

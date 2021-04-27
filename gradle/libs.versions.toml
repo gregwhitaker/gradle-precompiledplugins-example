@@ -1,0 +1,26 @@
+#
+# Dependency Version Catalog
+#
+
+## Versions
+[versions]
+## Implementation
+slf4j = "1.7.30"
+springboot = "2.4.5"
+
+## Test
+junit = "5.3.1"
+
+## Libraries
+[libraries]
+## Implementation
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
+slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
+springboot-bom = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "springboot" }
+springboot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator" }
+springboot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test" }
+springboot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+
+## Test
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }

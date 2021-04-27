@@ -1,0 +1,33 @@
+/**
+ * Plugin for applying Java conventions to application modules.
+ */
+
+plugins {
+    // Gradle
+    id "idea"
+    id "java"
+    id "application"
+
+    // Example
+    id "example.dependency-management"
+
+    // Third-Party
+    id "com.adarshr.test-logger"
+    id "org.unbroken-dome.test-sets"
+}
+
+sourceCompatibility = 11
+
+// Dependency Management
+dependencies {
+    implementation libs.slf4j.api
+
+    testImplementation libs.junit.jupiter.api
+
+    testRuntimeOnly libs.junit.jupiter.engine
+}
+
+// Testing
+test {
+    useJUnitPlatform()
+}

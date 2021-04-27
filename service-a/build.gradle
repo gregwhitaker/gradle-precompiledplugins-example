@@ -1,0 +1,7 @@
+plugins {
+    id "example.springboot-app"
+}
+
+dependencies {
+    implementation project(":core-lib")
+}
