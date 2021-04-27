@@ -12,7 +12,7 @@ public class HelloController {
 
   @GetMapping(value = "/hello",
               produces = MediaType.TEXT_PLAIN_VALUE)
-  public ResponseEntity<?> hello(@RequestParam("name") String name) {
+  public ResponseEntity<?> hello(@RequestParam(value = "name", required = false) String name) {
     return ResponseEntity.ok(HelloMessageGenerator.helloMessage(name) + " - from Service B");
   }
 }

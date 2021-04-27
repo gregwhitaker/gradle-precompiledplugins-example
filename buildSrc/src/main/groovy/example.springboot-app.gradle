@@ -27,11 +27,3 @@ task bootRunLocal(group: 'Application') {
     }
     finalizedBy bootRun
 }
-
-task bootRunLocalDebug(group: 'Application') {
-    description = 'Runs this project as a Spring Boot application with the "local" profile active in debug mode.'
-    bootRun.configure {
-        jvmArgs = [ '-Dspring.profiles.active=local', '-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005' ]
-    }
-    finalizedBy bootRun
-}
