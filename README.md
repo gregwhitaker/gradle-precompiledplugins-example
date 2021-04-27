@@ -1,4 +1,6 @@
 # gradle-precompiledplugins-example
+[![Build](https://github.com/gregwhitaker/gradle-precompiledplugins-example/actions/workflows/gradle.yml/badge.svg)](https://github.com/gregwhitaker/gradle-precompiledplugins-example/actions/workflows/gradle.yml)
+
 An example of using [Precompiled Script Plugins](https://docs.gradle.org/current/userguide/custom_plugins.html#sec:precompiled_plugins) in Gradle.
 
 ## Building the Example
